@@ -9,8 +9,6 @@
     GitHub Repository, Class function files, and necessary 
     comments in code
 
-    here 
-
 */
 
 class gradebook{
@@ -18,7 +16,7 @@ class gradebook{
     private:
 
     /*
-        Necessary Vector(s) && Pairs:
+        Necessary Vector(s) && Pairs: ///( Assigned to: Sam G and Grant )\\\\
 
             -> LAB_names
             -> LAB_grades
@@ -34,13 +32,13 @@ class gradebook{
     /*
         gradebook Class Functions
 
-        default constructor
-        constructor for Vetcors
-        constructor for pairs
+        default constructor  ///( Assigned to: Grant )\\\\ 
+        constructor for Vetcors ///( Assigned to: Sam G )\\\\
+        constructor for pairs ///( Assigned to: Sam G and Grant )\\\\
         void Menu ///( Assigned to: Sam )\\\\
             -> terminal command line args to specify menu board
 
-            individual Grade 1
+            individual Grade 1 ///( Assigned to: Sam G and Grant )\\\\
                 -> 1( "Lab" keyword name) " " 2( "Week#" for expected grade) ==> Labs
                 -> 1( "Assignment" keyword name) " " 2("Assignment#" for expected grade) ==> Assignments
                 -> 1( "Project1" keyword name)
@@ -69,14 +67,18 @@ class gradebook{
             -> string_stream that seperates keywords by '|' into certain vector or pair
             -> *** READ file name as command line argument ***
 
-        Writing output
+        Writing output ///( Assigned to: Sam G )\\\\
             -> Mandatory file check (incase if something is deleted, regardless or nothing is deleted)
 
         Helper Functions ( ^^^^ Used in above functions ^^^^ )
             -> checking for invalid grades ( num>100 or num < 0) ///( Assigned to: Claudia )\\\\
                 -> Manual check to see if grade is with bounds
-                    ==> if not, put "##" and demand for new grade in bounds 
-            -> Find keyword from terminal for individual grade(string, int *index) of found keyword
+                    ==> if not, put "###" and demand for new grade in bounds 
+
+
+            -> Find keyword from terminal for individual grade(string, int *index) of found keyword ///( Assigned to: Grant )\\\\
+
+
             -> If the file is not present in the directory ///( Assigned to: Claudia )\\\\
                 -> *** Based on command line file name ***
         
