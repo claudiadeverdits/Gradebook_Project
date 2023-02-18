@@ -31,7 +31,7 @@ void showMenu(){
 
 int main(){
 
-    //Opening
+    //Opening Menu
     showMenu();
 
 }
