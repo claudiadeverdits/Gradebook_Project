@@ -30,8 +30,6 @@ void showMenu(){
 
 
 int main(){
-
-    //Opening Menu
     showMenu();
 
 }
