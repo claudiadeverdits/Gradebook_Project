@@ -21,17 +21,26 @@ class gradeBook{
 
     private:
 
-    /*
-        Necessary Vector(s) && Pairs: ///( Assigned to: Sam G and Grant )\\\\
+    //        -> LAB_names
+    std::vector<std::string>lab_Names;
 
-            -> LAB_names
-            -> LAB_grades
-            -> ASSIGNMENT_names
-            -> ASSIGNMENT_grades
-            -> PROJ1-pair <string, int> == Name, Grade
-            -> PROJ2-pair <string, int> == Name, Grade
-            -> Exam-pair <string, int> == Name, Grade
-    */
+//        -> LAB_grades
+    std::vector<int>lab_Grades;
+
+//        -> ASSIGNMENT_names
+    std::vector<std::string>assignment_Names;
+
+//        -> ASSIGNMENT_grades
+    std::vector<int>assignment_Grades;
+
+//        -> PROJ1-pair <string, int> == Name, Grade
+    std::pair<std::string, int>proj_1;
+
+//        -> PROJ2-pair <string, int> == Name, Grade
+    std::pair<std::string, int>proj_2;
+
+//        -> Exam-pair <string, int> == Name, Grade
+    std::pair<std::string, int>exam;
 
     public:
 
