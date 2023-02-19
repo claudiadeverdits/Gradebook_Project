@@ -51,7 +51,7 @@ class gradeBook{
         gradeBook(std::pair<std::string, int>);
 
         // Constructor to find grades (Sam G and Grant)
-        gradeBook(std::string keyword);
+        int specific_Grade(std::string keyword);
 
         void Menu ///( Assigned to: Sam )\\\\
             -> terminal command line args to specify menu board
