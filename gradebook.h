@@ -1,5 +1,7 @@
 //Gradebook Class Header File
 
+#include <vector>
+#include <iomanip>
 #ifndef GRADEBOOK_H
 #define GRADEBOOK_H
 
@@ -11,7 +13,7 @@
 
 */
 
-class gradebook{
+class gradeBook{
 
     private:
 
@@ -29,12 +31,21 @@ class gradebook{
 
     public:
 
-    /*
-        gradebook Class Functions
+        //gradebook Class Functions
 
-        default constructor  ///( Assigned to: Grant )\\\\ 
-        constructor for Vetcors ///( Assigned to: Sam G )\\\\
-        constructor for pairs ///( Assigned to: Sam G and Grant )\\\\
+         // default constructor  ///( Assigned to: Grant )\\\\ 
+
+        gradeBook();
+        gradeBook(int data);
+
+       //constructor for Vetcors ///( Assigned to: Grant )\\\
+
+        gradeBook(std::vector<int> vec);
+
+       // constructor for pairs ///( Assigned to: Sam G and Grant )\\\\
+
+        gradeBook(std::pair<std::string, int>);
+
         void Menu ///( Assigned to: Sam )\\\\
             -> terminal command line args to specify menu board
 
