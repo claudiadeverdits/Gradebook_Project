@@ -2,6 +2,10 @@
 
 #include <vector>
 #include <iomanip>
+#include <sstream>
+#include <fstream>
+#include <string>
+#include <iterator>
 #ifndef GRADEBOOK_H
 #define GRADEBOOK_H
 
@@ -78,8 +82,13 @@ class gradeBook{
             -> string_stream that seperates keywords by '|' into certain vector or pair
             -> *** READ file name as command line argument ***
 
-        Writing output ///( Assigned to: Sam G )\\\\
+        Writing output ///( Assigned to: Grant )\\\\
             -> Mandatory file check (incase if something is deleted, regardless or nothing is deleted)
+        std::ofstream out_file("output.txt");
+        std::ostream_iterator<string> out_itr(file,"\n");
+        std::copy(this->vec.begin),this->vec.end(),out_itr);
+        file.close();
+
 
         Helper Functions ( ^^^^ Used in above functions ^^^^ )
             -> checking for invalid grades ( num>100 or num < 0) ///( Assigned to: Claudia )\\\\
