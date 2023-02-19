@@ -19,3 +19,6 @@ gradeBook::gradeBook(std::pair<std::string, int>){ //pair constructor
 
 }
 
+int gradeBook::specific_Grade(std::string keyword){
+
+}
