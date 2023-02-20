@@ -45,32 +45,46 @@ void userChoice(Gradebook *g){
     {
         switch(choice){
             //Individual Grades
-            case 0:{ //Labs
+            case 0: //Labs
                 std::cout << "Enter in the lab assignment name('Week#'):" << "\n";
                 std::cin >> name;
                 std::cout << "Lab " << name << "\n";
-            }
+                break;
 
-            case 1:{
+            case 1:
                 std::cout << "Enter in the assignment name('Assignment#'):" << "\n";
                 std::cin >> name;
                 std::cout << "Assignment " << name << "\n";
-            }
+                break;
+            
             case 2:
+                break;
             case 3:
+                break;
             case 4:
+                break;
             //Category Grades
             case 5:
+                break;
             case 6:
+                break;
             case 7:
+                break;
             case 8:
+                break;
             //All specific grades
             case 9:
+                break;
             case 10:
+                break;
             case 11:
-    }
+                break;
 
-}
+            default:
+                std::cout << "Invalid input! Expected numbers 0-11" << "\n";
+        }
+
+    }   
 }
 
 int main(int argc, char*argv[]){
