@@ -3,6 +3,16 @@
 #ifndef GRADEBOOK_H
 #define GRADEBOOK_H
 
+#include <iostream>
+#include <vector>
+#include <utility>
+#include <fstream>
+#include <sstream>
+#include <string>
+
+
+
+
 /*   ///( Assigned to: Sam )\\\\
 
     Taking care of documentation in code implementation on 
@@ -34,7 +44,11 @@ class Gradebook{
         std::pair<std::string, double> PROJ2;
         std::pair<std::string, double> EXAM;
 
+        std::string fname;
+
         bool valid_num(double num);
+        void readFile(std::string file_name);
+        void check_file_name(std::string* file_name);
 
     public:
 
@@ -97,12 +111,7 @@ class Gradebook{
         Gradebook(int data);
         Gradebook(std::vector<int> vec);
         Gradebook(std::pair<std::string, int>);
-
-        void readFile(std::string file_name);
-        void check_file_name(std::string* file_name);
-
    
-
 };
 
 

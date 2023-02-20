@@ -11,6 +11,7 @@
 Gradebook::Gradebook(std::string fname){
     //default
 
+    //getting input and check file name from terminal
     std::string *file_name = &fname;
     check_file_name(file_name);
 

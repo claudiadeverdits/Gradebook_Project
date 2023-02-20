@@ -34,17 +34,21 @@ void showMenu(){
         std::cout << "\t" << "To view only overall grades: 'Overall'" << "\n";
 }
 
-int main(){
+int main(int argc, char*argv[]){
+
+    std::string fname(argv[1]);
+
+    Gradebook *g = new Gradebook(fname);
     
-    std::string input;
-    std::cout << "Enter the file name to read from(including '.txt')" << "\n";
-    std::cin >> input;
+    // std::string input;
+    // std::cout << "Enter the file name to read from(including '.txt')" << "\n";
+    // std::cin >> input;
 
-    std::string *fname = &input;
+    // std::string *fname = &input;
 
-    //get fname that is 'present' in the directory
-    showMenu();
-
+    // //get fname that is 'present' in the directory
+    // showMenu();
+/*
     int choice;
     std::cin >> choice;
 
@@ -81,4 +85,5 @@ int main(){
     }
 
     showMenu();
+    */
 }
