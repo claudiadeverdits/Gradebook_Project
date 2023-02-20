@@ -1,11 +1,5 @@
 //Gradebook Class Header File
 
-#include <vector>
-#include <iomanip>
-#include <sstream>
-#include <fstream>
-#include <string>
-#include <iterator>
 #ifndef GRADEBOOK_H
 #define GRADEBOOK_H
 
@@ -17,51 +11,39 @@
 
 */
 
-class gradeBook{
+class Gradebook{
 
     private:
 
-    //        -> LAB_names
-    std::vector<std::string>lab_Names;
+    /*
+        Necessary Vector(s) && Pairs: ///( Assigned to: Sam G and Grant )\\\\
 
-//        -> LAB_grades
-    std::vector<int>lab_Grades;
+            -> LAB_names
+            -> LAB_grades
+            -> ASSIGNMENT_names
+            -> ASSIGNMENT_grades
+            -> PROJ1-pair <string, int> == Name, Grade
+            -> PROJ2-pair <string, int> == Name, Grade
+            -> Exam-pair <string, int> == Name, Grade
+    */
+        std::vector<std::string> LAB_names;
+        std::vector<double> LAB_grades;
+        std::vector<std::string> ASSIGNMENT_names;
+        std::vector<double> ASSIGNMENT_grades;
+        std::pair<std::string, double> PROJ1;
+        std::pair<std::string, double> PROJ2;
+        std::pair<std::string, double> EXAM;
 
-//        -> ASSIGNMENT_names
-    std::vector<std::string>assignment_Names;
-
-//        -> ASSIGNMENT_grades
-    std::vector<int>assignment_Grades;
-
-//        -> PROJ1-pair <string, int> == Name, Grade
-    std::pair<std::string, int>proj_1;
-
-//        -> PROJ2-pair <string, int> == Name, Grade
-    std::pair<std::string, int>proj_2;
-
-//        -> Exam-pair <string, int> == Name, Grade
-    std::pair<std::string, int>exam;
+        bool valid_num(double num);
 
     public:
 
-        //gradebook Class Functions
+    /*
+        gradebook Class Functions
 
-         // default constructor  ///( Assigned to: Grant )\\\\ 
-
-        gradeBook();
-        gradeBook(int data);
-
-       //constructor for Vetcors ///( Assigned to: Grant )\\\
-
-        gradeBook(std::vector<int> vec);
-
-       // constructor for pairs ///( Assigned to: Sam G and Grant )\\\\
-
-        gradeBook(std::pair<std::string, int>);
-
-        // Constructor to find grades (Sam G and Grant)
-        int specific_Grade(std::string keyword);
-
+        default constructor  ///( Assigned to: Grant )\\\\ 
+        constructor for Vetcors ///( Assigned to: Sam G )\\\\
+        constructor for pairs ///( Assigned to: Sam G and Grant )\\\\
         void Menu ///( Assigned to: Sam )\\\\
             -> terminal command line args to specify menu board
 
@@ -94,13 +76,8 @@ class gradeBook{
             -> string_stream that seperates keywords by '|' into certain vector or pair
             -> *** READ file name as command line argument ***
 
-        Writing output ///( Assigned to: Grant )\\\\
+        Writing output ///( Assigned to: Sam G )\\\\
             -> Mandatory file check (incase if something is deleted, regardless or nothing is deleted)
-        std::ofstream out_file("output.txt");
-        std::ostream_iterator<string> out_itr(file,"\n");
-        std::copy(this->vec.begin),this->vec.end(),out_itr);
-        file.close();
-
 
         Helper Functions ( ^^^^ Used in above functions ^^^^ )
             -> checking for invalid grades ( num>100 or num < 0) ///( Assigned to: Claudia )\\\\
@@ -116,7 +93,13 @@ class gradeBook{
         
     
     */
+        Gradebook();
+        Gradebook(int data);
+        Gradebook(std::vector<int> vec);
+        Gradebook(std::pair<std::string, int>);
 
+        void readFile(std::string file_name);
+   
 
 };
 
