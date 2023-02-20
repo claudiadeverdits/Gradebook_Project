@@ -5,22 +5,29 @@
 #include <utility>
 #include <fstream>
 #include <sstream>
+#include <string>
 
 
-Gradebook::Gradebook(){
+Gradebook::Gradebook(std::string fname){
     //default
-}
 
-Gradebook::Gradebook(int data){  //data type constructor 
-
-}
-
-Gradebook::Gradebook(std::vector<int> vec){  //vector constructor 
+    std::string *file_name = &fname;
+    check_file_name(file_name);
 
 }
 
-Gradebook::Gradebook(std::pair<std::string, int>){ //pair constructor
+void Gradebook::check_file_name(std::string* file_name){
+    std::ifstream file;
 
+    file.open(*file_name);
+
+    while(!file){
+        std::cout << "File does not exist. Please enter the correct name: ";
+        std::cin >> (*file_name);
+        file.open(*file_name);
+    }
+
+    readFile((*file_name));
 }
 
 bool Gradebook::valid_num(double num){

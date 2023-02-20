@@ -93,12 +93,14 @@ class Gradebook{
         
     
     */
-        Gradebook();
+        Gradebook(std::string fname);
         Gradebook(int data);
         Gradebook(std::vector<int> vec);
         Gradebook(std::pair<std::string, int>);
 
         void readFile(std::string file_name);
+        void check_file_name(std::string* file_name);
+
    
 
 };
