@@ -34,20 +34,65 @@ void showMenu(){
         std::cout << "\t" << "To view only overall grades: 'Overall'" << "\n";
 }
 
+void check_file_name(std::string* file_name){
+    std::ifstream file;
 
+    file.open(*file_name);
 
-int main(int argc, char* argv[]){
+    while(!file){
+        std::cout << "File does not exist. Please enter the correct name: ";
+        std::cin >> (*file_name);
+        file.open(*file_name);
+    }
+}
+
+int main(){
     
+    std::string input;
     std::cout << "Enter the file name to read from(including '.txt')" << "\n";
-    std::string fname(argv[1]);
+    std::cin >> input;
 
-    //get fname that is 'good' in the directory
+    std::string *fname = &input;
 
+    //get fname that is 'present' in the directory
+    check_file_name(fname);
 
     showMenu();
 
+    int choice;
+    std::cin >> choice;
+
+    std::string name;
+    switch(choice){
+        
+        //Individual Grades
+        case 0: //Labs
+            std::cout << "Enter in the lab assignment name('Week#'):" << "\n";
+            std::cin >> name;
+            std::cout << "Lab " << name << "\n";
+
+        case 1:
+            std::cout << "Enter in the assignment name('Assignment#'):" << "\n";
+            std::cin >> name;
+            std::cout << "Assignment " << name << "\n";
+
+        case 2:
+        case 3:
+        case 4:
+        //Category Grades
+        case 5:
+        case 6:
+        case 7:
+        case 8:
+        //All specific grades
+        case 9:
+        case 10:
+        case 11:
 
 
+        default:
 
+    }
 
+    showMenu();
 }
