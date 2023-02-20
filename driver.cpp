@@ -1,6 +1,13 @@
 // DRIVER
 
+#include "gradebook.h"
+
 #include <iostream>
+#include <vector>
+#include <fstream>
+#include <sstream>
+#include <iostream>
+#include <string>
 
 
 void showMenu(){
@@ -29,7 +36,18 @@ void showMenu(){
 
 
 
-int main(){
+int main(int argc, char* argv[]){
+    
+    std::cout << "Enter the file name to read from(including '.txt')" << "\n";
+    std::string fname(argv[1]);
+
+    //get fname that is 'good' in the directory
+
+
     showMenu();
+
+
+
+
 
 }
