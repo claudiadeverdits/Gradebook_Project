@@ -69,10 +69,13 @@ void userChoice(Gradebook *g){
                 std::cout << g->computeCategoryScores(choice) << std::endl;
                 break;
             case 6:
+                std::cout << g->computeCategoryScores(choice) << std::endl;
                 break;
             case 7:
+                std::cout << g->computeCategoryScores(choice) << std::endl;
                 break;
             case 8:
+                std::cout << g->computeCategoryScores(choice) << std::endl;
                 break;
             //All specific grades
             case 9:
@@ -80,6 +83,7 @@ void userChoice(Gradebook *g){
             case 10:
                 break;
             case 11:
+                std::cout << g->computeOverall() << std::endl;
                 break;
 
             default:

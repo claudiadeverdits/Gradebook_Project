@@ -138,7 +138,7 @@ double Gradebook::computeCategoryScores(int choice){
         category_vec = &ASSIGNMENT_grades;
     }
     else if(choice == 7){
-        return PROJ1.second + PROJ2.second;
+        return ((PROJ1.second * .15) + (PROJ2.second * .35)) * 2;
     }
     else if(choice == 8){
         return EXAM.second;
@@ -147,10 +147,31 @@ double Gradebook::computeCategoryScores(int choice){
     for(int i = 0; i < (*category_vec).size(); i++){
         category_total += (*category_vec)[i];
     }
+    category_total /= (*category_vec).size();
 
     return category_total;
 }
 
-// double Gradebook::computeOverall(int choice){
+double Gradebook::computeOverall(){
+    double overall_score = 0;
 
-// }
+    double temp_score;
+
+    //labs
+    temp_score = computeCategoryScores(5);
+    overall_score += (temp_score * .20);
+
+    //assignments
+    temp_score = computeCategoryScores(6);
+    overall_score += (temp_score * .20);
+
+    //projects
+    overall_score += (PROJ1.second * .15) + (PROJ2.second * .35);
+
+    //exam only if overall is under 90
+    if(overall_score < 90){
+        overall_score += (EXAM.second * .10);
+    }
+
+    return overall_score;
+}

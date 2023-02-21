@@ -110,7 +110,7 @@ class Gradebook{
         Gradebook(std::string fname);
         
         double computeCategoryScores(int choice);
-        //double computeOverall(int choice);
+        double computeOverall();
    
 };
 
