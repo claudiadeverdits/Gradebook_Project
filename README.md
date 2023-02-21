@@ -1,5 +1,5 @@
 # CSC212 Gradebook Project
-## headingTeam Members: Samuel Calise, Claudia Deverdits, Samuel Gryska, Grant Houatchanthara
+## Team Members: Samuel Calise, Claudia Deverdits, Samuel Gryska, Grant Houatchanthara
 
 Summary:
 	The purpose of our program’s objective is to replicate a gradebook for a student who is enrolled in CSC212. The program is compiled based on the following C++ classes driver.cpp, gradebook.cpp, and gradebook.h – these programs were developed and collaborated to replicate a gradebook structure for CSC212’s assignments. Through our group's planning and collaboration, this project will be capable of carrying out a variety of grades for assignments for enrolled students to see their individual, categorical, and overall grades visually.
