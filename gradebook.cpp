@@ -126,3 +126,31 @@ void Gradebook::readFile(std::string file_name){
         std::cout << "You have " << invalid_nums << " invalid number(s) in your file. Please try again once all numbers are between 0 and 100." << std::endl;
     }
 }
+
+double Gradebook::computeCategoryScores(int choice){
+    std::vector<double>* category_vec;
+    double category_total = 0;
+
+    if(choice == 5){
+        category_vec = &LAB_grades;
+    }
+    else if(choice == 6){
+        category_vec = &ASSIGNMENT_grades;
+    }
+    else if(choice == 7){
+        return PROJ1.second + PROJ2.second;
+    }
+    else if(choice == 8){
+        return EXAM.second;
+    }
+
+    for(int i = 0; i < (*category_vec).size(); i++){
+        category_total += (*category_vec)[i];
+    }
+
+    return category_total;
+}
+
+// double Gradebook::computeOverall(int choice){
+
+// }

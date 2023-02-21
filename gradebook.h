@@ -108,9 +108,9 @@ class Gradebook{
     
     */
         Gradebook(std::string fname);
-        Gradebook(int data);
-        Gradebook(std::vector<int> vec);
-        Gradebook(std::pair<std::string, int>);
+        
+        double computeCategoryScores(int choice);
+        //double computeOverall(int choice);
    
 };
 

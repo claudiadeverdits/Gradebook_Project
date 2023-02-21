@@ -65,6 +65,8 @@ void userChoice(Gradebook *g){
                 break;
             //Category Grades
             case 5:
+                //test to show function working
+                std::cout << g->computeCategoryScores(choice) << std::endl;
                 break;
             case 6:
                 break;
