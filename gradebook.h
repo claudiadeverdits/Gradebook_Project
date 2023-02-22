@@ -37,16 +37,16 @@ class Gradebook{
             -> Exam-pair <string, int> == Name, Grade
     */
         std::vector<std::string> LAB_names;
-        std::vector<double> LAB_grades;
+        std::vector<std::string> LAB_grades;
         std::vector<std::string> ASSIGNMENT_names;
-        std::vector<double> ASSIGNMENT_grades;
-        std::pair<std::string, double> PROJ1;
-        std::pair<std::string, double> PROJ2;
-        std::pair<std::string, double> EXAM;
+        std::vector<std::string> ASSIGNMENT_grades;
+        std::pair<std::string, std::string> PROJ1;
+        std::pair<std::string, std::string> PROJ2;
+        std::pair<std::string, std::string> EXAM;
 
         std::string fname;
 
-        bool valid_num(double num);
+        bool valid_num(std::string num);
         void readFile(std::string file_name);
         void check_file_name(std::string* file_name);
 
