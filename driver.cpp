@@ -45,23 +45,30 @@ void userChoice(Gradebook *g){
     {
         switch(choice){
             //Individual Grades
-            case 0: //Labs
+            case 0: //Lab
                 std::cout << "Enter in the lab assignment name('Week#'):" << "\n";
                 std::cin >> name;
-                std::cout << "Lab " << name << "\n";
+                std::cout << "Lab-> " << name << ": " <<g ->getIndividualGrade(name, choice) << "\n";
                 break;
 
-            case 1:
+            case 1: //Assignment
                 std::cout << "Enter in the assignment name('Assignment#'):" << "\n";
                 std::cin >> name;
-                std::cout << "Assignment " << name << "\n";
+                std::cout << "Assignment-> " << name << ": " <<g ->getIndividualGrade(name, choice) << "\n";
                 break;
             
-            case 2:
+            case 2: //Project 1 Grade
+                name ="";
+                std::cout << "Project 1: " <<g ->getIndividualGrade(name, choice) << "\n";
                 break;
-            case 3:
+
+            case 3: //Project 2 Grade
+                name ="";
+                std::cout << "Project 2: " <<g ->getIndividualGrade(name, choice) << "\n";
                 break;
-            case 4:
+            case 4: //Exam Grade
+                name ="";
+                std::cout << "Exam: "<<g ->getIndividualGrade(name, choice) << "\n";
                 break;
             //Category Grades
             case 5:
@@ -95,7 +102,18 @@ void userChoice(Gradebook *g){
 
 int main(int argc, char*argv[]){
 
-    std::string fname(argv[1]);
+    std::string fname;
+
+    if (argc == 1)
+    {
+        while (fname == "")
+        {
+            std::cout << "Please Enter in a file name in your directory:";
+            std::cin >> fname;
+        }
+    }
+    else
+        std::string fname(argv[1]);
 
     Gradebook *g = new Gradebook(fname);
 

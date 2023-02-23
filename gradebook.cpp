@@ -17,6 +17,38 @@ Gradebook::Gradebook(std::string fname){
 
 }
 
+
+std::string Gradebook::getIndividualGrade(std::string name, int num){
+
+
+    if (num == 0){ //Lab Grade
+        for (int i = 0; i < LAB_names.size(); i++)
+        {
+            if (LAB_names[i] == name)
+                return LAB_grades[i];
+        }
+    }
+    else if (num == 1){ //Assignment Grade
+        for (int i = 0; i < ASSIGNMENT_names.size(); i++)
+        {
+            if (ASSIGNMENT_names[i] == name)
+                return ASSIGNMENT_grades[i];
+        }
+    }
+    else if (num == 2){ //Project 1 Grade
+        return PROJ1.second;
+    }
+    else if (num == 3){ //Project 2 Grade
+        return PROJ2.second;
+    }
+    else if (num == 4){ //Project 2 Grade
+        return EXAM.second;
+    }
+        
+    return "Invalid Name";
+
+}
+
 void Gradebook::check_file_name(std::string* file_name){
     std::ifstream file;
 
