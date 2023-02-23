@@ -1,0 +1,8 @@
+GrantHouatchanthara|CSC212
+LAB_Name|Week1|Week2|Week3|Week4|Week5|Week6|Week7|Week8|Week9|Week10|Week11|Week12
+LAB_Grade|59|72|80|67|0|90|100|-20|89|100|N/A|N/A
+ASSIGNMENT_Name|Assignment1|Assignment2|Assignment3|Assignment4
+ASSIGNMENT_Grade|79|100|88|93
+Project1|83
+Project2|N/A
+Final|N/A
