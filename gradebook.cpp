@@ -39,6 +39,31 @@ bool Gradebook::valid_num(std::string num){
     return true;
 }
 
+void Gradebook::find_lowest_idx(){
+    double score;
+    double lowest, second_lowest;
+    int idx;
+
+    for(int j = 0; j < 2; j++){
+        lowest = std::stod(LAB_grades[0]);
+        for(int i = 0; i < LAB_grades.size(); i++){
+            score = std::stod(LAB_grades[i]);
+            if(score <= lowest && j == 0){
+                lowest = score;
+                second_lowest = score;
+                idx = i;
+            }
+            else if(score <= lowest && score != second_lowest){
+                lowest = score;
+                idx = i;
+            }
+        }
+        LAB_lowest_idx.push_back(idx);
+    }
+    LAB_grades[LAB_lowest_idx[0]] += " -D";
+    LAB_grades[LAB_lowest_idx[1]] += " -D";
+}
+
 void Gradebook::readFile(std::string file_name){
     std::ifstream file(file_name);
     std::string line;
@@ -67,6 +92,7 @@ void Gradebook::readFile(std::string file_name){
                     invalid_nums++;
                 } 
             }
+            find_lowest_idx();
         }
         else if(vec_name == "ASSIGNMENT_Name"){
             while(std::getline(s_stream, token, '|')){
@@ -142,12 +168,22 @@ double Gradebook::computeCategoryScores(int choice){
         double exam = std::stod(EXAM.second);
         return exam;
     }
+
     double score;
     for(int i = 0; i < (*category_vec).size(); i++){
         score = std::stod((*category_vec)[i]);
-        category_total += score;
+        //exclude 2 lowest grades
+        if(score != std::stod(LAB_grades[LAB_lowest_idx[0]]) && score != std::stod(LAB_grades[LAB_lowest_idx[1]])){
+            category_total += score;
+        }
     }
-    category_total /= (*category_vec).size();
+    //adjust size if computing lab grades
+    if(category_vec == &LAB_grades){
+        category_total /= (*category_vec).size() - 2;
+    }
+    else{
+        category_total /= (*category_vec).size();
+    }
 
     return category_total;
 }

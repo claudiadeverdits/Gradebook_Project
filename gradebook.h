@@ -44,11 +44,15 @@ class Gradebook{
         std::pair<std::string, std::string> PROJ2;
         std::pair<std::string, std::string> EXAM;
 
+        std::vector<int> LAB_lowest_idx;
+
         std::string fname;
 
         bool valid_num(std::string num);
         void readFile(std::string file_name);
         void check_file_name(std::string* file_name);
+        void find_lowest_idx();
+
 
     public:
 
