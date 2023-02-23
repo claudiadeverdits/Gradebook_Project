@@ -124,10 +124,13 @@ int Gradebook::readFile(std::string file_name){
                     this->LAB_grades.push_back(token);
                 }
                 else{
+                    this->LAB_grades.push_back("###");
                     invalid_nums++;
                 } 
             }
-            find_lowest_idx();
+            if(invalid_nums == 0){
+                find_lowest_idx();
+            }
         }
         else if(vec_name == "ASSIGNMENT_Name"){
             while(std::getline(s_stream, token, '|')){
@@ -140,6 +143,7 @@ int Gradebook::readFile(std::string file_name){
                     this->ASSIGNMENT_grades.push_back(token);
                 }
                 else{
+                    this->ASSIGNMENT_grades.push_back("###");
                     invalid_nums++;
                 }
             }
@@ -151,6 +155,7 @@ int Gradebook::readFile(std::string file_name){
                     this->PROJ1.second = token;
                 }
                 else{
+                    this->PROJ1.second = "###";
                     invalid_nums++;
                 }
             }
@@ -162,6 +167,7 @@ int Gradebook::readFile(std::string file_name){
                     this->PROJ2.second = token;
                 }
                 else{
+                    this->PROJ2.second = "###";
                     invalid_nums++;
                 }
             }
@@ -174,6 +180,7 @@ int Gradebook::readFile(std::string file_name){
                     this->EXAM.second = token;
                 }
                 else{
+                    this->EXAM.second = "###";
                     invalid_nums++;
                 }
             }
