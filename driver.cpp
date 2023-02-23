@@ -73,16 +73,16 @@ void userChoice(Gradebook *g){
             //Category Grades
             case 5:
                 //test to show function working
-                std::cout << g->computeCategoryScores(choice) << std::endl;
+                std::cout << "Lab Category Overall: " << g->computeCategoryScores(choice) << std::endl;
                 break;
             case 6:
-                std::cout << g->computeCategoryScores(choice) << std::endl;
+                std::cout << "Assignment Category Overall: " << g->computeCategoryScores(choice) << std::endl;
                 break;
             case 7:
-                std::cout << g->computeCategoryScores(choice) << std::endl;
+                std::cout << "Projects Category Overall: " << g->computeCategoryScores(choice) << std::endl;
                 break;
             case 8:
-                std::cout << g->computeCategoryScores(choice) << std::endl;
+                std::cout << "Exam Category Overall: " << g->computeCategoryScores(choice) << std::endl;
                 break;
             //All specific grades
             case 9: //All graded Assignments 
@@ -94,15 +94,19 @@ void userChoice(Gradebook *g){
                 std::cout << "Assignment Overall: " << g->computeCategoryScores(6) << std::endl;
                 std::cout << "Projects Overall: " <<  g->computeCategoryScores(7) << std::endl;
                 std::cout << "Exam Overall: " <<  g->computeCategoryScores(8) << std::endl;
+                std::cout << "Overall Grade: " << g->computeOverall() << std::endl;
                 break;
             case 11:
-                std::cout << g->computeOverall() << std::endl;
+                std::cout <<"Overall Grade: " << g->computeOverall() << std::endl;
                 break;
 
             default:
                 std::cout << "Invalid input! Expected numbers 0-11" << "\n";
         }
-
+        
+        showMenu();
+        std::cout << "When finished type '999'" << "\n";
+        std::cin >> choice;
     }   
 }
 
