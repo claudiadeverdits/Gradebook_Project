@@ -17,6 +17,48 @@ Gradebook::Gradebook(std::string fname){
 
 }
 
+void Gradebook::allGradedAssignments(){
+
+    std::string dropped = "-D";
+    std::cout << "Graded Lab Assignments" << "\n";
+    for (int i = 0; i < LAB_names.size(); i++){
+        if (LAB_grades[i] != "N/A")
+            std::cout << "\t" << LAB_names[i] << ": " << LAB_grades[i] << "\n";
+        else
+            std::cout << LAB_names[i] << ": is not graded yet";
+    }   
+    
+    std::cout << "\n";
+
+    std::cout << "Graded Assignments" << "\n";
+    for (int i = 1; i < ASSIGNMENT_grades.size(); i++){
+        if (ASSIGNMENT_grades[i] != "N/A")
+            std::cout << "\t" << ASSIGNMENT_names[i] << ": " << ASSIGNMENT_grades[i] << "\n"; 
+        else
+            std::cout << "\t" << ASSIGNMENT_names[i] << ": is not graded yet" << "\n"; 
+    }
+    std::cout << "\n";
+
+    std::cout << "Graded Projects: " << "\n";
+    if ( PROJ1.second != "N/A")
+        std::cout << "\t" << PROJ1.first << ": " << PROJ1.second << "\n";
+    else
+        std::cout << "Project1 is not graded yet";
+
+    if ( PROJ2.second != "N/A")
+        std::cout << "\t" << PROJ2.first << ": " << PROJ2.second << "\n";
+    else
+        std::cout << "Project2 is not graded yet";
+
+    std::cout << "\n";
+
+    std::cout << "Graded Exam:" << "\n";
+    if (EXAM.second != "N/A")
+        std::cout << "\t" << EXAM.first << ": " << EXAM.second << "\n";
+    else
+        std::cout << "Exam is not graded";
+}
+
 
 std::string Gradebook::getIndividualGrade(std::string name, int num){
 
@@ -256,6 +298,8 @@ double Gradebook::computeOverall(){
         double exam = std::stod(EXAM.second);
         overall_score += (exam * .10);
     }
+    else
+        EXAM.second = "PASS";
 
     return overall_score;
 }

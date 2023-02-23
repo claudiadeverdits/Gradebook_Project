@@ -116,6 +116,7 @@ class Gradebook{
         double computeCategoryScores(int choice);
         double computeOverall();
         std::string getIndividualGrade(std::string weekNum, int choice);
+        void allGradedAssignments();
    
 };
 
