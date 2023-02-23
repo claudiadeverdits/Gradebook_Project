@@ -49,7 +49,7 @@ class Gradebook{
         std::string fname;
 
         bool valid_num(std::string num);
-        void readFile(std::string file_name);
+        int readFile(std::string file_name);
         void check_file_name(std::string* file_name);
         void find_lowest_idx();
 

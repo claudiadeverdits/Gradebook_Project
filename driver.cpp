@@ -104,18 +104,20 @@ int main(int argc, char*argv[]){
 
     std::string fname;
 
-    if (argc == 1)
-    {
+    if (argc == 1){
         while (fname == "")
         {
-            std::cout << "Please Enter in a file name in your directory:";
+            std::cout << "Please enter a file name in your directory:";
             std::cin >> fname;
         }
     }
-    else
-        std::string fname(argv[1]);
+    else if (argc == 2){
+        fname = argv[1];
+    }
 
     Gradebook *g = new Gradebook(fname);
+
+    //if invalid numbers are found !STOP PROGRAM!
 
     showMenu();
     userChoice(g);

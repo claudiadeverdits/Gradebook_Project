@@ -60,7 +60,10 @@ void Gradebook::check_file_name(std::string* file_name){
         file.open(*file_name);
     }
 
-    readFile((*file_name));
+    if (readFile(*file_name) > 0)
+    {
+        exit(0);
+    }
 }
 
 bool Gradebook::valid_num(std::string num){
@@ -96,7 +99,7 @@ void Gradebook::find_lowest_idx(){
     LAB_grades[LAB_lowest_idx[1]] += " -D";
 }
 
-void Gradebook::readFile(std::string file_name){
+int Gradebook::readFile(std::string file_name){
     std::ifstream file(file_name);
     std::string line;
 
@@ -175,10 +178,13 @@ void Gradebook::readFile(std::string file_name){
                 }
             }
         }
+
+       
     }
     if(invalid_nums > 0){
         std::cout << "You have " << invalid_nums << " invalid number(s) in your file. Please try again once all numbers are between 0 and 100." << std::endl;
     }
+     return invalid_nums;
 }
 
 double Gradebook::computeCategoryScores(int choice){
