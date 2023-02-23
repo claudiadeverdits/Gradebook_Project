@@ -1,6 +1,6 @@
 JohnDoe|CSC212
 LAB_Name|Week1|Week2|Week3|Week4|Week5|Week6|Week7|Week8|Week9|Week10|Week11|Week12
-LAB_Grade|100|100|80|100|100|100|100|-1|70|100|100|100
+LAB_Grade|100|100|80|100|100|100|100|69|70|100|100|100
 ASSIGNMENT_Name|Assignment1|Assignment2|Assignment3|Assignment4
 ASSIGNMENT_Grade|100|100|100|100
 Project1|80
