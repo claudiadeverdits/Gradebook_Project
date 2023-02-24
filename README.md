@@ -8,7 +8,19 @@
 
 
 <h3> Planning: </h3>
-When planning our project’s direction in the driver and gradebook classes, below is a detailed outline of portions of code agreed upon and obligated to complete the problem’s resolution.  
+<p>When planning our project’s direction in the driver and gradebook classes, below is a detailed outline of portions of code agreed upon and obligated to complete the problem’s resolution.
+</p>
+
+  - Samuel Calise: <p> Responsible for project documentation, designing and creating an outline of class header file, driver class(main.cpp), and class object functions file, and textfiles required for assignment. </p>
+
+
+  - Claudia Deverdits: <p> Responisble for creating and developing class functions in gradebook.cpp file, support in debugging syntax and runtime errors, and helping overall design of the project's C++ class files. </p>
+
+
+  - Samuel Gryska: 
+
+
+  - Grant Houatchanthara:
 
 
 
