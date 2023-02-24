@@ -21,6 +21,11 @@ void Gradebook::writeFile(std::string fname){
     std::ofstream file;
     file.open(fname);
 
+    //if overall was never calculated, calculate now
+    if(course_overall == "N/A" && invalidNums == 0){
+        computeOverall();
+    }
+
     //output name and course
     file << student_name << "|" << course_name << "\n";
 
@@ -59,10 +64,6 @@ void Gradebook::writeFile(std::string fname){
     //exam
     file << EXAM.first << "|" << EXAM.second << "\n";
 
-    //if overall was never calculated, calculate now
-    if(course_overall == "N/A" && invalidNums == 0){
-        computeOverall();
-    }
     file << "Course Overall|" << course_overall;
 
     file.close();
