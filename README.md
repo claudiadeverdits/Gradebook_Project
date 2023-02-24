@@ -1,13 +1,15 @@
-# CSC212 Gradebook Project
-## Team Members: Samuel Calise, Claudia Deverdits, Samuel Gryska, Grant Houatchanthara
+<h1> CSC212 Gradebook Project </h1>
 
-#### Summary:
-The purpose of our program’s objective is to replicate a gradebook for a student who is enrolled in CSC212. The program is compiled based on the following C++ classes driver.cpp, gradebook.cpp, and gradebook.h – these programs were developed and collaborated to replicate a gradebook structure for CSC212’s assignments. Through our group's planning and collaboration, this project will be capable of carrying out a variety of grades for assignments for enrolled students to see their individual, categorical, and overall grades visually.
+<h4> Team Members: Samuel Calise, Claudia Deverdits, Samuel Gryska, Grant Houatchanthara </h4>
+
+<h3> Summary: </h3>
+
+<p size = 8> The purpose of our program’s objective is to replicate a gradebook for a student who is enrolled in CSC212. The program is compiled based on the following C++ classes driver.cpp, gradebook.cpp, and gradebook.h – these programs were developed and collaborated to replicate a gradebook structure for CSC212’s assignments. Through our group's planning and collaboration, this project will be capable of carrying out a variety of grades for assignments for enrolled students to see their individual, categorical, and overall grades visually. </p>
 
 
 #### Planning:
 When planning our project’s direction in the driver and gradebook classes, below is a detailed outline of portions of code agreed upon and obligated to complete the problem’s resolution.  
-        <<<Insert CLEAN planning format >>>
+
 
 
 #### Documentation:
