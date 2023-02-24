@@ -178,7 +178,7 @@ void Gradebook::find_lowest_idx(){
                 second_lowest = score;
                 idx = i;
             }
-            else if(score <= lowest && score != second_lowest){
+            else if(score <= lowest && i != LAB_lowest_idx[0]){
                 lowest = score;
                 idx = i;
             }
@@ -295,12 +295,27 @@ int Gradebook::readFile(std::string file_name){
 double Gradebook::computeCategoryScores(int choice){
     std::vector<std::string>* category_vec;
     double category_total = 0;
+    double score;
 
     if(choice == 5){
-        category_vec = &LAB_grades;
+        // category_vec = &LAB_grades;
+        for(int i = 0; i < LAB_grades.size(); i++){
+            score = std::stod(LAB_grades[i]);
+            //exclude 2 lowest grades
+            if(i != LAB_lowest_idx[0] && i != LAB_lowest_idx[1]){
+                category_total += score;
+            }
+        }
+        category_total /= LAB_grades.size() - 2;
     }
     else if(choice == 6){
-        category_vec = &ASSIGNMENT_grades;
+        //category_vec = &ASSIGNMENT_grades;
+        for(int i = 0; i < ASSIGNMENT_grades.size(); i++){
+            score = std::stod(ASSIGNMENT_grades[i]);
+            //exclude 2 lowest grades
+            category_total += score;
+        }
+        category_total /= ASSIGNMENT_grades.size();
     }
     else if(choice == 7){
         double proj1 = std::stod(PROJ1.second);
@@ -310,22 +325,6 @@ double Gradebook::computeCategoryScores(int choice){
     else if(choice == 8){
         double exam = std::stod(EXAM.second);
         return exam;
-    }
-
-    double score;
-    for(int i = 0; i < (*category_vec).size(); i++){
-        score = std::stod((*category_vec)[i]);
-        //exclude 2 lowest grades
-        if(score != std::stod(LAB_grades[LAB_lowest_idx[0]]) && score != std::stod(LAB_grades[LAB_lowest_idx[1]])){
-            category_total += score;
-        }
-    }
-    //adjust size if computing lab grades
-    if(category_vec == &LAB_grades){
-        category_total /= (*category_vec).size() - 2;
-    }
-    else{
-        category_total /= (*category_vec).size();
     }
 
     return category_total;
@@ -338,18 +337,16 @@ double Gradebook::computeOverall(){
 
     //labs
     temp_score = computeCategoryScores(5);
-    overall_score += (temp_score * .20);
-
+    overall_score += (temp_score * 20);
     //assignments
     temp_score = computeCategoryScores(6);
-    overall_score += (temp_score * .20);
-
+    overall_score += (temp_score * 20);
     //projects
     double proj1 = std::stod(PROJ1.second);
     double proj2 = std::stod(PROJ2.second);
-    overall_score += (proj1 * .15) + (proj2 * .35);
+    overall_score += (proj1 * 15) + (proj2 * 35);
 
-    
+    overall_score /= 90;
 
     //exam only if overall is under 90
     if(overall_score < 90){
@@ -363,7 +360,6 @@ double Gradebook::computeOverall(){
         overall_score = 1000;
         this->course_overall = "A";
     }
-    
 
     return overall_score;
 }
