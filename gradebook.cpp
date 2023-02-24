@@ -17,6 +17,58 @@ Gradebook::Gradebook(std::string fname){
 
 }
 
+void Gradebook::writeFile(std::string fname){
+    std::ofstream file;
+    file.open(fname);
+
+    //output name and course
+    file << student_name << "|" << course_name << "\n";
+
+    //labs
+    file << "LAB_Name";
+    for(int i = 0; i < LAB_names.size(); i++){
+        file << "|" << LAB_names[i];
+    }
+    file << "\n";
+
+    file << "LAB_Grade";
+    for(int i = 0; i < LAB_grades.size(); i++){
+        file << "|" << LAB_grades[i];
+    }
+    file << "\n";
+
+    //assignments
+    file << "ASSIGNMENT_Name";
+    for(int i = 0; i < ASSIGNMENT_names.size(); i++){
+        file << "|" << ASSIGNMENT_names[i];
+    }
+    file << "\n";
+
+    file << "ASSIGNMENT_Grade";
+    for(int i = 0; i < ASSIGNMENT_grades.size(); i++){
+        file << "|" << ASSIGNMENT_grades[i];
+    }
+    file << "\n";
+
+    //proj1
+    file << PROJ1.first << "|" << PROJ1.second << "\n";
+
+    //proj2
+    file << PROJ2.first << "|" << PROJ2.second << "\n";
+
+    //exam
+    file << EXAM.first << "|" << EXAM.second << "\n";
+
+    //if overall was never calculated, calculate now
+    if(course_overall == "N/A" && invalidNums == 0){
+        computeOverall();
+    }
+    file << "Course Overall|" << course_overall;
+
+    file.close();
+
+}
+
 void Gradebook::allGradedAssignments(){
 
     std::string dropped = "-D";
@@ -102,8 +154,8 @@ void Gradebook::check_file_name(std::string* file_name){
         file.open(*file_name);
     }
 
-    if (readFile(*file_name) > 0)
-    {
+    if (readFile(*file_name) > 0){
+        writeFile((*file_name));
         exit(0);
     }
 }
@@ -147,6 +199,12 @@ int Gradebook::readFile(std::string file_name){
 
     double num;
     int invalid_nums = 0;
+
+    //read student name and course name from file
+    std::getline(file, line);
+    std::istringstream ss(line);
+    std::getline(ss, this->student_name, '|');
+    std::getline(ss, this->course_name);
 
     while(std::getline(file, line)){
         std::istringstream s_stream(line);
@@ -233,6 +291,8 @@ int Gradebook::readFile(std::string file_name){
     if(invalid_nums > 0){
         std::cout << "You have " << invalid_nums << " invalid number(s) in your file. Please try again once all numbers are between 0 and 100." << std::endl;
     }
+
+    this->invalidNums = invalid_nums;
      return invalid_nums;
 }
 
@@ -300,6 +360,8 @@ double Gradebook::computeOverall(){
     }
     else
         EXAM.second = "PASS";
+
+    this->course_overall = std::to_string(overall_score);
 
     return overall_score;
 }

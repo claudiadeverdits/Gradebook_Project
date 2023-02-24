@@ -1,6 +1,6 @@
 ClaudiaDeverdits|CSC212
 LAB_Name|Week1|Week2|Week3|Week4|Week5|Week6|Week7|Week8|Week9|Week10|Week11|Week12
-LAB_Grade|100|96|83|100|73|100|100|100|90|99|100|78
+LAB_Grade|100|96|83|100|73|100|120|100|90|99|100|78
 ASSIGNMENT_Name|Assignment1|Assignment2|Assignment3|Assignment4
 ASSIGNMENT_Grade|100|95|100|90
 Project1|96

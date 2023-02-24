@@ -46,7 +46,11 @@ class Gradebook{
 
         std::vector<int> LAB_lowest_idx;
 
+        int invalidNums;
         std::string fname;
+        std::string student_name;
+        std::string course_name;
+        std::string course_overall = "N/A";
 
         bool valid_num(std::string num);
         int readFile(std::string file_name);
@@ -117,6 +121,7 @@ class Gradebook{
         double computeOverall();
         std::string getIndividualGrade(std::string weekNum, int choice);
         void allGradedAssignments();
+        void writeFile(std::string file_name);
    
 };
 

@@ -132,5 +132,6 @@ int main(int argc, char*argv[]){
     showMenu();
     userChoice(g);
 
+    g->writeFile(fname);
     
 }
