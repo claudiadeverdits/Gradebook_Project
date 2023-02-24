@@ -87,7 +87,6 @@ void userChoice(Gradebook *g){
             //All specific grades
             case 9: //All graded Assignments 
                 g -> allGradedAssignments();
-                std::cout << "Overall Grade: " << g->computeOverall() << std::endl;
                 break;
             case 10:
                 std::cout << "Lab Overall: " << g->computeCategoryScores(5) << std::endl;

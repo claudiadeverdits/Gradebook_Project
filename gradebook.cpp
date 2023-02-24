@@ -71,6 +71,11 @@ void Gradebook::writeFile(std::string fname){
 }
 
 void Gradebook::allGradedAssignments(){
+    //edge case if exam doesn't need to be taken
+    std::string overall = std::to_string(computeOverall());
+    if(overall == "1000.000000"){
+        overall = "A";
+    }
 
     std::cout << "Graded Lab Assignments" << "\n";
     for (int i = 0; i < LAB_names.size(); i++){
@@ -79,13 +84,13 @@ void Gradebook::allGradedAssignments(){
     
     std::cout << "\n";
 
-    std::cout << "Graded Assignments" << "\n";
+    std::cout << "Graded Assignments:" << "\n";
     for (int i = 0; i < ASSIGNMENT_grades.size(); i++){
             std::cout << "\t" << ASSIGNMENT_names[i] << ": " << ASSIGNMENT_grades[i] << "\n"; 
     }
     std::cout << "\n";
 
-    std::cout << "Graded Projects: " << "\n";
+    std::cout << "Graded Projects:" << "\n";
     std::cout << "\t" << PROJ1.first << ": " << PROJ1.second << "\n";
 
     std::cout << "\t" << PROJ2.first << ": " << PROJ2.second << "\n";
@@ -93,7 +98,13 @@ void Gradebook::allGradedAssignments(){
     std::cout << "\n";
 
     std::cout << "Graded Exam:" << "\n";
-        std::cout << "\t" << EXAM.first << ": " << EXAM.second << "\n";
+    std::cout << "\t" << EXAM.first << ": " << EXAM.second << "\n";
+
+    std::cout << "\n";
+
+    std::cout << "Overall Grade:" << overall << "\n";
+
+    std::cout << "\n";
 }
 
 
@@ -338,15 +349,21 @@ double Gradebook::computeOverall(){
     double proj2 = std::stod(PROJ2.second);
     overall_score += (proj1 * .15) + (proj2 * .35);
 
+    
+
     //exam only if overall is under 90
     if(overall_score < 90){
         double exam = std::stod(EXAM.second);
         overall_score += (exam * .10);
+        this->course_overall = std::to_string(overall_score);
     }
-    else
+    else{
         EXAM.second = "PASS";
-
-    this->course_overall = std::to_string(overall_score);
+        //default val if exam doesn't need
+        overall_score = 1000;
+        this->course_overall = "A";
+    }
+    
 
     return overall_score;
 }
