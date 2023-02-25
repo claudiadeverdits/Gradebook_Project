@@ -14,7 +14,7 @@
   - Samuel Calise: <p> Responsible for project documentation, assigning a balanced workload amongst group members, designing and creating an outline of class header file, driver class(main.cpp), and object class functions file(gradebook.cpp), and textfiles required for assignment. </p>
 
 
-  - Claudia Deverdits: <p> Responisble for creating and developing class functions in gradebook.cpp file, support in debugging syntax and runtime errors, and helping overall design of the project's C++ class files. </p>
+  - Claudia Deverdits: <p> Responisble for creating and developing class functions in gradebook.cpp file, support in debugging syntax and runtime errors, and helping overall structure of the project's C++ class files. </p>
 
 
   - Samuel Gryska: 
