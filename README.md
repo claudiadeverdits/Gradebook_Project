@@ -91,7 +91,7 @@ This assignment aims to resolve the issue for a student who may attempt to predi
 
 - Samuel Calise: <p> Contributed to the documentation of ReadMe file, implementation of driver.cpp, created gradebook class functions in gradebook.cpp, debugging, improvising code, inline documentation with program files, and creating ideas for helper functions to handle cases during program runtime. </p>
 
-- Claudia Deverdits: <p> Contributed to the creation of gradebook.cpp file, debugging object class functions and improvising the driver implementation.cpp, advised directions based on project’s expectations and grading. </p>
+- Claudia Deverdits: <p> Contributed to the creation of gradebook.cpp file, debugging object class functions and improvising the driver.cpp implementation, advised directions based on project’s expectations and grading. </p>
 
 - Samuel Gryska: <p>  Contributed to theIndividualGrade class function, but the code was insufficient and required to be deleted to handle the project’s requirement. In addition to implementing code when creating an output file, code was incorrectly implemented into the header file. It was deleted due to not following the proper header file coding structure. According to commit logs, there were no future commits to the repository after their first commit. </p>
 
