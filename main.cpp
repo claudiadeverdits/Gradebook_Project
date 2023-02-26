@@ -40,6 +40,8 @@ void userChoice(Gradebook *g){
     int choice;
     std::cin >> choice;
 
+    std::string overall;
+
     std::string name;
     while (choice != 999)
     {
@@ -93,10 +95,18 @@ void userChoice(Gradebook *g){
                 std::cout << "Assignment Overall: " << g->computeCategoryScores(6) << std::endl;
                 std::cout << "Projects Overall: " <<  g->computeCategoryScores(7) << std::endl;
                 std::cout << "Exam Overall: " <<  g->computeCategoryScores(8) << std::endl;
-                std::cout << "Overall Grade: " << g->computeOverall() << std::endl;
+                overall = std::to_string(g->computeOverall());
+                if(overall == "1000.000000"){
+                    overall = "A";
+                }
+                std::cout << "Overall Grade: " << overall << std::endl;
                 break;
             case 11:
-                std::cout <<"Overall Grade: " << g->computeOverall() << std::endl;
+                overall = std::to_string(g->computeOverall());
+                if(overall == "1000.000000"){
+                    overall = "A";
+                }
+                std::cout <<"Overall Grade: " << overall << std::endl;
                 break;
 
             default:
