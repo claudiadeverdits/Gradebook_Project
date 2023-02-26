@@ -77,6 +77,32 @@ This assignment aims to resolve the issue for a student who may attempt to predi
 
 <p> This function will read the verified file name entered by the user in the terminal and populate the vectors of assignments, labs, and pairs for the two projects and exam grade. There is also a counter for the invalid graded assignment counter when populating the variables with grades. The program will only proceed once there are zero invalid grades in the prompted text file. These invalid grades are recognized as ‘###’ which the user will be able to see the invalid grade keyword and change it before rerunning the cpp files in the terminal. </p>
 
+<h4> 9. double Gradebook::computeCategoryScores(int choice) </h4>
+
+<p> The purpose of this function is to show overall category scores for labs, assignments, projects one and two, and the exam. These categories are calculated based on the total number of points based on CSC212’s syllabus outline. </p>
+
+<h4> 10. double Gradebook::computeOverall() </h4>
+
+<p> The computeOverall function takes the sum of all category scores from the previous function and displays the results. In addition to verifying whether the student passes the course with an A with a 90 or higher (based on the syllabus) or when the grade is less than 90, the program will calculate the exam grade from the file. </p>
+
+
+<h2> Implementation and Contributions: </h2>
+<p> ***Note: Due to communications issues during development, expected outcomes from the Planning section may not be reflected in this section.*** </p>
+
+- Samuel Calise: <p> Contributed to the documentation of ReadMe file, implementation of driver.cpp, created gradebook class functions in gradebook.cpp, debugging, improvising code, inline documentation with program files, and creating ideas for helper functions to handle cases during program runtime. </p>
+
+- Claudia Deverdits: <p> Contributed to the creation of gradebook.cpp file, debugging object class functions and improvising the driver implementation.cpp, advised directions based on project’s expectations and grading. </p>
+
+- Samuel Gryska: <p>  Contributed to theIndividualGrade class function, but the code was insufficient and required to be deleted to handle the project’s requirement. In addition to implementing code when creating an output file, code was incorrectly implemented into the header file. It was deleted due to not following the proper header file coding structure. According to commit logs, there were no future commits to the repository after their first commit. </p>
+
+- Grant Houatchanthara:<p> Contributed to initializing the default constructor, overloaded constructors, and other class functions. However, when creating the default constructor, there was no code initializing any variables. According to commit logs, there were no future commits to the repository after their first commit.
+ </p>
+ 
+ <h2> References: </h2>
+
+<p>Syllabus for URI's CSC212 course:
+https://csc-dsa.github.io/sp23/intro.html
+</p>
 
 
 
