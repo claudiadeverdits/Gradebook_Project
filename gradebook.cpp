@@ -185,8 +185,12 @@ void Gradebook::find_lowest_idx(){
         }
         LAB_lowest_idx.push_back(idx);
     }
-    LAB_grades[LAB_lowest_idx[0]] += " -D";
-    LAB_grades[LAB_lowest_idx[1]] += " -D";
+    if(LAB_grades[LAB_lowest_idx[0]] != LAB_grades[LAB_lowest_idx[0]] + "-D"){
+        LAB_grades[LAB_lowest_idx[0]] += " -D";
+    }
+    if(LAB_grades[LAB_lowest_idx[1]] != LAB_grades[LAB_lowest_idx[1]] + "-D"){
+        LAB_grades[LAB_lowest_idx[1]] += " -D";
+    }
 }
 
 int Gradebook::readFile(std::string file_name){
