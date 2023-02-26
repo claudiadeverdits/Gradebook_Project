@@ -354,8 +354,10 @@ double Gradebook::computeOverall(){
 
     //exam only if overall is under 90
     if(overall_score < 90){
+        overall_score *= 90;
         double exam = std::stod(EXAM.second);
-        overall_score += (exam * .10);
+        overall_score += (exam * 10);
+        overall_score /= 100;
         this->course_overall = std::to_string(overall_score);
     }
     else{
