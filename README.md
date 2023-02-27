@@ -30,6 +30,29 @@
 
 When compiling our main.cpp class, we recommend using files local to the program’s directory of the IDE space. After compiling the main.cpp and gradebook.cpp classes, please use the recommended text files in the directory. In case of an error when running the compilation’s executable and file in the terminal (separated by a space), the program will be capable of verifying if the file exists in the directory. After successfully entering the executable and text file name, a menu will be prompted to enter a specific integer to view the particular cases and a unique integer to terminate the program's runtime.
 
+<h2> Text File Format: </h2>
+
+<p> ***Note: This is the expected format when create and interacting with the text file with current code. Commas are not allowed to be used in the text file, only '|' symbol to separate attribute.***
+  
+First Line: Student name with no spaces, separated by ‘|’, with student course
+  
+Second Line: LAB_Name, separated by ‘|’, followed by assignment names, also separated by ‘|’ besides the last assignment name in the row will not need an ending ‘|’
+  
+Third Line: : LAB_Grade, separated by ‘|’, followed by assignment grades, also separated by ‘|’ besides the last assignment name in the row will not need an ending ‘|’
+  
+Fourth Line: Assignment_Name, separated by ‘|’, followed by assignment names, also separated by ‘|’ besides the last assignment name in the row will not need an ending ‘|’
+  
+Five Line: Assignment_Grade, separated by ‘|’, followed by assignment grades, also separated by ‘|’ besides the last assignment name in the row will not need an ending ‘|’
+  
+Sixth Line: ProjectName, separated by ‘|’, ending with grade
+  
+Seventh Line: ProjectName, separated by ‘|’, ending with grade
+  
+Eighth Line: ExamName, separated by ‘|’, ending with grade
+</p>
+
+<h2> Pseudocode Documentation: </h2>
+<p> The files pseudo_main.cpp, pseudo_gradebook.cpp, pseudo_gradebook.h are intended to show a description line-by-line process of our project’s runtime. These files will have multiline commented code to demonstration the processes and our group’s thinking and when developing our grade book program. </p>
 
 <h2> Code Functionality: </h2>
 
