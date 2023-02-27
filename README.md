@@ -16,7 +16,7 @@
   - Samuel Calise: <p> Responsible for project documentation, assigning a balanced workload amongst group members, designing and creating an outline of class header file, driver class(main.cpp), and object class functions file(gradebook.cpp), and textfiles required for assignment. </p>
 
 
-  - Claudia Deverdits: <p> Responisble for creating and developing class functions in gradebook.cpp file, support in debugging syntax and runtime errors, and helping overall structure of the project's C++ class files. </p>
+  - Claudia Deverdits: <p> Responsible for creating and developing class functions in gradebook.cpp file, support in debugging syntax and runtime errors, and helping overall structure of the project's C++ class files.</p>
 
 
   - Samuel Gryska: <p>  Responsible for creating and completing constructors for when the gradebook is given a vector and a pair of assignments and a grade, a gradebook class function for writing to a result output text file, and a gradebook class function to print out an individual graded assignment based on the user's input. </p>
@@ -93,14 +93,13 @@ This assignment aims to resolve the issue for a student who may attempt to predi
 
 - Claudia Deverdits: <p> Contributed to the creation of gradebook.cpp file, debugging object class functions and improvising the driver.cpp implementation, advised directions based on project’s expectations and grading. </p>
 
-- Samuel Gryska: <p>  Contributed to theIndividualGrade class function, but the code was insufficient and required to be deleted to handle the project’s requirement. In addition to implementing code when creating an output file, code was incorrectly implemented into the header file. It was deleted due to not following the proper header file coding structure. According to commit logs, there were no future commits to the repository after their first commit. </p>
+- Samuel Gryska: <p>  Contributed to theIndividualGrade class function, but the code was insufficient and required to be deleted to handle the project’s requirement. In addition to implementing code when creating an output file, code was incorrectly implemented into the header file. It was deleted due to not following the proper header file coding structure. According to commit logs, there were no future commits to the repository after their first commit. However, I contributed to the coding assignment's code review and demonstration portion and pointed out minor bugs during the code’s runtime.</p>
 
-- Grant Houatchanthara:<p> Contributed to initializing the default constructor, overloaded constructors, and other class functions. However, when creating the default constructor, there was no code initializing any variables. According to commit logs, there were no future commits to the repository after their first commit.
- </p>
+- Grant Houatchanthara:<p> Contributed to initializing the default constructor, overloaded constructors, and other class functions. However, when creating the default constructor, there was no code initializing any variables. According to commit logs, there were no future commits to the repository after their first commit. According to commit logs, there were no future commits to the repository after their first commit. However, I contributed to the coding assignment's code review and demonstration portion and pointed out minor bugs during the code’s runtime.</p>
  
  <h2> References: </h2>
 
-<p>Syllabus for URI's CSC212 course:
+<p>Syllabus for URI's CSC212 Course:
 https://csc-dsa.github.io/sp23/intro.html
 </p>
 
