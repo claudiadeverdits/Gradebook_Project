@@ -13,7 +13,7 @@
   When planning our project’s direction in the main program and gradebook classes, below is a detailed outline of portions of code agreed upon and obligated to complete the problem’s resolution.
 </p>
 
-  - Samuel Calise: <p> Responsible for project documentation, assigning a balanced workload amongst group members, designing and creating an outline of class header file, main.cpp (base file), and object class functions file(gradebook.cpp), and textfiles required for assignment. </p>
+  - Samuel Calise: <p> Responsible for project documentation, assigning a balanced workload amongst group members, designing and creating an outline of class header file, main.cpp (base file), and object class functions file(gradebook.cpp, derived class), and textfiles required for assignment. </p>
 
 
   - Claudia Deverdits: <p> Responsible for creating and developing class functions in gradebook.cpp file, support in debugging syntax and runtime errors, and helping overall structure of the project's C++ class files.</p>
